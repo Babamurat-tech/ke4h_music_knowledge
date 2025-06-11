@@ -1,108 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Music for Knowledge Enrichment</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header, footer {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    main {
+      padding: 2em;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 3em;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-top: 1em;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>🎵 Music for Knowledge Enrichment</h1>
-    <p>Musiqa orqali bilimlarni boyitish bo‘yicha loyiha</p>
+    <h1>🎶 Music for Knowledge Enrichment</h1>
+    <p>Ilmiy bilimlarni musiqiy madaniyat orqali boyitish</p>
   </header>
+  <main>
+    <section>
+      <h2>Loyiha haqida</h2>
+      <p>Bu loyiha musiqaning madaniy va ma'rifiy ahamiyatini o‘rganish, RDF uchliklar orqali musiqachilar va asarlar haqida ma’lumotlarni tuzish va SPARQL yordamida bilimlar grafini yaratishni o‘z ichiga oladi.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Ludwig_van_Beethoven.jpg/640px-Ludwig_van_Beethoven.jpg" alt="Beethoven portreti">
+    </section>
 
-  <section id="intro">
-    <h2>🎼 Kirish</h2>
-    <p>Bu loyiha musiqa va uning bilim olishdagi, tarbiyadagi va madaniyatni saqlashdagi o‘rnini o‘rganishga bag‘ishlangan. Quyida RDF uchliklar, tasvirlar va SPARQL so‘rovlari bilan tanishishingiz mumkin.</p>
-  </section>
+    <section>
+      <h2>Jamoamiz</h2>
+      <p>Bizning guruh turli fanlardan bo‘lgan talabalar va o‘qituvchilardan tashkil topgan. Ular musiqiy bilimlar, texnologiya va bilim grafikasi ustida ishlaydi.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Grand_piano_Concertgebouw_Amsterdam.jpg/640px-Grand_piano_Concertgebouw_Amsterdam.jpg" alt="Kontsert fortepiano">
+    </section>
 
-  <section id="images">
-    <h2>🖼 Rasmlar</h2>
-    <div>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Grand_piano_001.jpg" alt="Grand Piano" width="300">
-      <p>🎹 Piano — klassik musiqa asbobi</p>
-    </div>
-    <div>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Dutar_kichik_2.jpg" alt="Dutar" width="300">
-      <p>🎻 Dutar — o‘zbek milliy cholg‘usi</p>
-    </div>
-  </section>
+    <section>
+      <h2>Metodologiya</h2>
+      <p>LLM (katta til modellari), Wikidata, RDF va SPARQL texnologiyalari yordamida musiqa bilan bog‘liq bilimlarni strukturalashtirish amalga oshirildi.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/SPARQL_logo.svg/320px-SPARQL_logo.svg.png" alt="SPARQL logosi">
+    </section>
 
-  <section id="rdf">
-    <h2>🔗 RDF Uchliklar</h2>
-    <pre><code>@prefix : &lt;http://example.org/music#&gt; .
-@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+    <section>
+      <h2>Natijalar</h2>
+      <p>Masalan, Beethoven haqida RDF uchliklar, mashhur kompozitorlar ro‘yxati, ularning asarlari va musiqiy uslublari haqida SPARQL sorovlari.</p>
+      <pre><code>@prefix : &lt;http://example.org/music#&gt; .
 
-:music a :CulturalElement ;
-       :usedIn :education, :therapy, :culturalPreservation .
+:Beethoven a :Composer ;
+           :birthPlace "Bonn" ;
+           :birthYear "1770" ;
+           :notableWork :Symphony9 ;
+           :style :Classical .</code></pre>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Sheet_music_score_sample.svg/640px-Sheet_music_score_sample.svg.png" alt="Notalar namunalari">
+    </section>
 
-:piano a :Instrument ;
-       :type "Keyboard" ;
-       :image &lt;https://upload.wikimedia.org/wikipedia/commons/6/69/Grand_piano_001.jpg&gt; .
-
-dutar a :Instrument ;
-       :type "String" ;
-       :image &lt;https://upload.wikimedia.org/wikipedia/commons/b/b6/Dutar_kichik_2.jpg&gt; .
-
-:beethoven a :Composer ;
-           foaf:name "Ludwig van Beethoven" ;
-           :famousWorks "Symphony No.9" .
-
-:yunusRajabi a :Composer ;
-             foaf:name "Yunus Rajabi" ;
-             :famousWorks "Maqomlar" .
-</code></pre>
-  </section>
-
-  <section id="sparql">
-    <h2>📊 SPARQL So‘rovlari</h2>
-
-    <h3>1. Cholg‘ular ro‘yxati:</h3>
-    <pre><code>SELECT ?instrument ?type
-WHERE {
-  ?instrument a :Instrument ;
-             :type ?type .
-}</code></pre>
-
-    <h3>2. Kompozitorlar va asarlari:</h3>
-    <pre><code>SELECT ?name ?work
-WHERE {
-  ?composer a :Composer ;
-            foaf:name ?name ;
-            :famousWorks ?work .
-}</code></pre>
-
-    <h3>3. Musiqa qanday sohalarda ishlatiladi:</h3>
-    <pre><code>SELECT ?field
-WHERE {
-  :music :usedIn ?field .
-}</code></pre>
-
-    <h3>4. Cholg‘ular uchun tasvirlar:</h3>
-    <pre><code>SELECT ?instrument ?image
-WHERE {
-  ?instrument a :Instrument ;
-              :image ?image .
-}</code></pre>
-
-  </section>
-  
-  <section id="ttl-download">
-    <h2>⬇️ TTL Faylni Yuklab Olish</h2>
-    <p>Ushbu loyiha uchun RDF formatidagi faylni quyidagi havola orqali yuklab olishingiz mumkin:</p>
-    <a href="https://yourusername.github.io/your-repo-name/music_data.ttl" target="_blank" download>📥 music_data.ttl faylini yuklab olish</a>
-  </section>
-<section id="ttl-download">
-  <h2>⬇️ TTL Faylni Yuklab Olish</h2>
-  <p>Ushbu loyiha uchun RDF formatidagi faylni quyidagi havola orqali yuklab olishingiz mumkin:</p>
-  <a href="https://babamurat-tech.github.io/ke4h_music_site/music_data.ttl" target="_blank" download>
-    📥 music_data.ttl faylini yuklab olish
-  </a>
-</section>
-
+    <section>
+      <h2>Manbalar</h2>
+      <ul>
+        <li>Wikidata.org</li>
+        <li>SPARQL Query Service</li>
+        <li>OpenAI ChatGPT</li>
+        <li>Wikimedia Commons (rasmlar)</li>
+      </ul>
+    </section>
+  </main>
   <footer>
-    <p>© 2025 Music for Knowledge Enrichment loyihasi</p>
+    <p>&copy; 2025 Music for Knowledge Enrichment loyihasi</p>
   </footer>
 </body>
 </html>
