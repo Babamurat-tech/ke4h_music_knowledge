@@ -1,0 +1,21 @@
+@prefix : <http://example.org/music#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+:music a :CulturalElement ;
+       :usedIn :education, :therapy, :culturalPreservation .
+
+:piano a :Instrument ;
+       :type "Keyboard" ;
+       :image <https://upload.wikimedia.org/wikipedia/commons/6/69/Grand_piano_001.jpg> .
+
+:dutar a :Instrument ;
+       :type "String" ;
+       :image <https://upload.wikimedia.org/wikipedia/commons/b/b6/Dutar_kichik_2.jpg> .
+
+:beethoven a :Composer ;
+           foaf:name "Ludwig van Beethoven" ;
+           :famousWorks "Symphony No.9" .
+
+:yunusRajabi a :Composer ;
+             foaf:name "Yunus Rajabi" ;
+             :famousWorks "Maqomlar" .
