@@ -2,117 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Topics</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Musical Knowledge Graphs</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
       margin: 0;
-      padding: 40px 20px;
-      background-color:#f7fbfc; /* pastel blue */
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #013243; /* almost black-blue */
-    }
-
-    h1 {
-      font-size: 2rem;
-      font-weight: bold;
-      font-style: italic;
-      color: ##d94f4f ; /* warm red matching the  emoji */
-      text-align: center;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
-      margin-bottom: 20px;
-    }
-
-    .content {
-      font-size: 1.125rem;
-      line-height: 1.6;
-      max-width: 900px;
-      margin: 0 auto;
+      padding: 0;
+      background: #f4f4f4;
       color: #333;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+    }
+    h2 {
+      color: #444;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <h1>🖇️ Musical Knowledge Graphs; Enriching Wikidata for Uzbekistan, Morocco, and Tunisia:</h1>
-  <div class="content">
-    <div style="max-width: 850px; margin: 0 auto; text-align: left; color: black; font-size: 1.1rem; font-style: normal; font-weight: normal; padding: 0 15px;">
-  This project explores the intersection of cultural heritage and semantic web technologies by focusing on music in Uzbekistan, Morocco, and Tunisia. Through the use of SPARQL queries on Wikidata and zero-shot prompting with language models (ChatGPT, Gemini, DeepSeek), we identify, compare, and validate structured and unstructured knowledge about musicians, instruments, genres, and cultural events. The goal is to highlight existing gaps and propose strategies to enrich Wikidata with underrepresented music-related data from these regions. Our work illustrates how knowledge engineering can contribute to preserving and promoting musical heritage across different cultures.<b></b>
-Great question — and you absolutely should be ready to explain why you chose music as your topic. Here's a strong answer you can give during your presentation or in your project intro:
-</div>
- <h3 style="max-width: 850px; margin: 20px auto 10px auto; text-align: left; 
-           font-weight: bold; font-style: italic; font-size: 1.4rem; 
-           color:#4E8183; padding: 0 15px;">
-  1️⃣ First-Time Experience with Semantic Web Technologies
-</h3>
-<div style="max-width: 850px; margin: 0 auto 30px auto; text-align: left; font-size: 1.125rem; line-height: 1.5; color: black; padding: 0 15px;">
-  <span style="color: #C08088; font-weight: bold; font-style: italic;">Problem:</span> As literature students, this was our first time working with semantic web concepts like SPARQL, RDF, and LLMs in the context of data enrichment for indigenous melodies.<br><br>
-  <span style="color: #C08088; font-weight: bold; font-style: italic;">Solution:</span> We learned from the teachers’ notes on Virtuale and supplemented our knowledge through online tutorials and documentation. This approach helped us build confidence and develop the necessary skills for the project.
-</div>
- <!-- Subtitle 2 -->
-<h3 style="color:#4E8183; font-weight: bold; font-style: italic; font-size: 1.5rem; max-width: 850px; margin: 40px auto 10px auto; text-align: left; padding: 0 15px;">
-  2️⃣ Crafting Accurate SPARQL Queries
-</h3>
-<div style="max-width: 850px; margin: 0 auto 30px auto; text-align: left; font-size: 1.125rem; line-height: 1.5; color: black; padding: 0 15px;">
-  <span style="color: #C08088; font-weight: bold; font-style: italic;">Problem:</span> At the start of our project, we found it challenging to design SPARQL queries that could effectively extract relevant musical data from Wikidata. This was due to inconsistent labeling of indigenous melodies and incomplete metadata for songs and artists.<br><br>
-  <span style="color: #C08088; font-weight: bold; font-style: italic;">Solution:</span> We studied existing SPARQL query structures and experimented with different property paths, using constructs like FILTER and UNION to refine results. Through repeated testing in the Wikidata Query Service, we gradually developed reliable queries that retrieved the information we needed.
-</div>
 
-<!-- Subtitle 3 -->
-<h3 style="color:#4E8183; font-weight: bold; font-style: italic; font-size: 1.5rem; max-width: 850px; margin: 40px auto 10px auto; text-align: left; padding: 0 15px;">
-  3️⃣ Prompting Large Language Models (LLMs)
-</h3>
-<div style="max-width: 850px; margin: 0 auto 30px auto; text-align: left; font-size: 1.125rem; line-height: 1.5; color: black; padding: 0 15px;">
-  <span style="color: #C08088; font-weight: bold; font-style: italic;">Problem:</span> We faced challenges in effectively using prompting techniques with ChatGPT and DeepSeek to generate relevant insights and information related to our project on music and melodies in Morocco, Tunisia, and Uzbekistan. At times, the models provided incomplete or general responses that did not align with our expectations or the specific details we wanted to highlight.<br><br>
-  <span style="color: #C08088; font-weight: bold; font-style: italic;">Solution:</span> We refined our prompting strategies by experimenting with different wording, adding examples, and iteratively asking clarifying questions. This approach helped us obtain more precise, relevant, and creative outputs that enriched the depth and quality of our research on musical traditions in the three regions.
-</div>
+  <header>
+    <h1>Musical Knowledge Graphs</h1>
+    <p>Enriching Wikidata for Uzbekistan, Morocco, and Tunisia</p>
+  </header>
 
-<!-- Subtitle 4 -->
-<h3 style="color:#4E8183; font-weight: bold; font-style: italic; font-size: 1.5rem; max-width: 850px; margin: 40px auto 10px auto; text-align: left; padding: 0 15px;">
-  4️⃣ Developing and Structuring the Website
-</h3>
-<div style="max-width: 850px; margin: 0 auto 30px auto; text-align: left; font-size: 1.125rem; line-height: 1.5; color: black; padding: 0 15px;">
-  <span style="color: #C08088; font-weight: bold; font-style: italic;">Problem:</span> We encountered difficulties in creating and organizing our website, especially since we had limited experience with web development. Integrating images, text, and interactive elements while maintaining a consistent design and ensuring smooth navigation proved challenging.<br><br>
-  <span style="color: #C08088; font-weight: bold; font-style: italic;">Solution:</span> We consulted online resources and GitHub Pages documentation to learn about site structuring and layout customization. By experimenting with different templates, applying consistent styling, and testing features for responsiveness, we successfully built a user-friendly website that showcased our research.
-<head>
-  <style>
-    h1 {
-      font-size: 2rem;
-      font-weight: bold;
-      font-style: italic;
-      color: ##d94f4f; /* warm red matching the emoji */
-      text-align: center;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
-      margin-bottom: 20px;
-    }
+  <div class="container">
+    <h2>🎯 Project Overview</h2>
+    <p>
+      This project explores the intersection of cultural heritage and semantic web technologies by focusing on music in Uzbekistan, Morocco, and Tunisia. Using SPARQL queries on Wikidata and AI models (ChatGPT, Gemini, DeepSeek), we extract and analyze musical data to identify gaps and enrich Wikidata with underrepresented music-related knowledge.
+    </p>
 
-    .content {
-      font-size: 1.125rem;
-      line-height: 1.6;
-      max-width: 900px;
-      margin: 0 auto;
-      color: #333;
-    }
-  </style>
-</head>
-<body>
-  <h1>💎 Lessons Learned</h1>
-</body>
-</div>
-<div style="max-width: 850px; margin: 0 auto 30px auto; text-align: left; font-size: 1.125rem; line-height: 1.6; color: black; padding: 0 15px;">
-  <ul style="padding-left: 20px; margin-top: 0;">
-    <li>We enhanced our ability to design effective SPARQL queries for extracting musical data from Wikidata.</li>
-    <li>Experimenting with prompting techniques improved how we guided LLMs like ChatGPT and DeepSeek to assist our research, though verifying AI outputs remains essential.</li>
-    <li>Building the website taught us valuable skills in web structuring, theming, and content presentation, helping us communicate our findings clearly and accessibly.</li>
-    <li>Collaboration and iterative problem-solving were key in overcoming technical and conceptual challenges throughout the project.</li>
-  </ul>
-<h1 style="color: black; font-size: 2rem; font-weight: bold; font-style: italic; text-align: center; text-shadow: 1px 1px 2px rgba(0,0,0,0.15); margin-bottom: 20px;">
-  ☄️ Conclusion
-</h1>
-</div>
-  <div style="max-width: 850px; margin: 0 auto 30px auto; text-align: left; font-size: 1.125rem; line-height: 1.6; color: black; padding: 0 15px;">
-  Our project successfully demonstrated how digital tools and semantic web technologies can be applied to explore and preserve musical traditions from Morocco, Tunisia, and Uzbekistan. By combining Wikidata querying, AI prompting, and web presentation, we contributed to the visibility and structured documentation of these cultural melodies.<br><br>
-  For future work, expanding the dataset with more local musical genres and artists would enrich the cultural knowledge graph. Further refinement of prompting strategies could enhance the reliability of AI-assisted research. Additionally, creating interactive visualizations and multilingual content would make the heritage more accessible to diverse audiences.
-</div>
+    <h2>🎶 Why Music?</h2>
+    <ul>
+      <li>Universal cultural expression reflecting identity, history, and values</li>
+      <li>Often underrepresented in structured databases</li>
+      <li>Showcases rich musical traditions of our target countries</li>
+      <li>Promotes diversity and inclusion in digital knowledge graphs</li>
+    </ul>
+
+    <h2>🧠 Why Wikidata?</h2>
+    <ul>
+      <li>Open, multilingual, and semantic knowledge graph</li>
+      <li>Supports SPARQL and RDF standards</li>
+      <li>Widely used in digital humanities and AI</li>
+      <li>Connects music with people, places, and cultural concepts</li>
+    </ul>
+
+    <h2>🌍 Selected Countries</h2>
+    <ul>
+      <li><strong>Uzbekistan:</strong> Shashmaqam and traditional instruments</li>
+      <li><strong>Morocco:</strong> Andalusi music and folk rhythms</li>
+      <li><strong>Tunisia:</strong> Malouf and unique regional styles</li>
+      <li>Each team member represents their country — bringing first-hand expertise</li>
+    </ul>
+
+    <h2>📌 Project Goal</h2>
+    <p>
+      Bridge knowledge gaps by combining:
+    </p>
+    <ul>
+      <li>Structured SPARQL queries from Wikidata</li>
+      <li>Unstructured answers from LLMs (zero-shot prompting)</li>
+      <li>Fact-checking and validation</li>
+      <li>A GitHub-based multilingual website documenting all results</li>
+    </ul>
+
+    <h2>🛠️ Tools Used</h2>
+    <ul>
+      <li>SPARQL (Wikidata Query Service)</li>
+      <li>Language Models (ChatGPT, Gemini, DeepSeek)</li>
+      <li>GitHub Pages</li>
+      <li>HTML + CSS</li>
+    </ul>
   </div>
+
+  <footer>
+    <p>© 2025 KE4H Team – Musical Knowledge Graphs</p>
+  </footer>
+
 </body>
 </html>
