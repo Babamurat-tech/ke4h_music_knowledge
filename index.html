@@ -6,100 +6,122 @@
   <title>Musical Knowledge Graphs</title>
   <style>
     body {
+      background-color: #99ccff;
       font-family: Arial, sans-serif;
-      line-height: 1.6;
       margin: 0;
       padding: 0;
-      color: #333;
     }
-    header {
-      background: #222;
-      color: #fff;
-      padding: 20px 0;
+
+    .title-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      padding: 50px 20px 20px;
+    }
+
+    .title-text {
+      font-size: 32px;
+      font-weight: bold;
+      color: #013243;
       text-align: center;
     }
-    .container {
+
+    .content {
+      background-color: white;
       max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-      background: white;
+      margin: 0 auto 30px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
+
     h2 {
-      color: #444;
-      border-bottom: 2px solid #ddd;
+      color: #333;
+      border-bottom: 2px solid #ccc;
       padding-bottom: 5px;
     }
+
     ul {
       margin-left: 20px;
     }
+
+    p {
+      color: #222;
+    }
+
     footer {
-      background: #222;
-      color: #fff;
       text-align: center;
-      padding: 15px;
-      margin-top: 20px;
+      padding: 20px;
+      background-color: #0077b6;
+      color: white;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Musical Knowledge Graphs</h1>
-    <p>Enriching Wikidata for Uzbekistan, Morocco, and Tunisia</p>
-  </header>
+  <div class="title-section">
+    <div class="title-text">
+      Musical Knowledge Graphs: Enriching Wikidata for Uzbekistan, Morocco, and Tunisia
+    </div>
+  </div>
 
-  <div class="container">
-    <h2>🎯 Project Overview</h2>
-    <p>
-      This project explores the intersection of cultural heritage and semantic web technologies by focusing on music in Uzbekistan, Morocco, and Tunisia. Using SPARQL queries on Wikidata and AI models (ChatGPT, Gemini, DeepSeek), we extract and analyze musical data to identify gaps and enrich Wikidata with underrepresented music-related knowledge.
-    </p>
-
+  <div class="content">
     <h2>🎶 Why Music?</h2>
+    <p>
+      Music is a universal form of cultural expression that reflects identity, history, and values.
+      It exists in every society but is often underrepresented in structured knowledge bases like Wikidata — especially for countries outside the Global North.
+    </p>
     <ul>
-      <li>Universal cultural expression reflecting identity, history, and values</li>
-      <li>Often underrepresented in structured databases</li>
-      <li>Showcases rich musical traditions of our target countries</li>
-      <li>Promotes diversity and inclusion in digital knowledge graphs</li>
+      <li>Showcase the rich musical traditions of Uzbekistan, Morocco, and Tunisia</li>
+      <li>Identify data gaps and biases in Wikidata's representation</li>
+      <li>Promote cultural diversity in digital knowledge graphs</li>
+      <li>Connect music to language, society, and communication</li>
     </ul>
 
     <h2>🧠 Why Wikidata?</h2>
-    <ul>
-      <li>Open, multilingual, and semantic knowledge graph</li>
-      <li>Supports SPARQL and RDF standards</li>
-      <li>Widely used in digital humanities and AI</li>
-      <li>Connects music with people, places, and cultural concepts</li>
-    </ul>
-
-    <h2>🌍 Selected Countries</h2>
-    <ul>
-      <li><strong>Uzbekistan:</strong> Shashmaqam and traditional instruments</li>
-      <li><strong>Morocco:</strong> Andalusi music and folk rhythms</li>
-      <li><strong>Tunisia:</strong> Malouf and unique regional styles</li>
-      <li>Each team member represents their country — bringing first-hand expertise</li>
-    </ul>
-
-    <h2>📌 Project Goal</h2>
     <p>
-      Bridge knowledge gaps by combining:
+      Wikidata is a central hub of structured, open, and multilingual knowledge. It powers Wikipedia, search engines, and AI systems.
     </p>
     <ul>
-      <li>Structured SPARQL queries from Wikidata</li>
-      <li>Unstructured answers from LLMs (zero-shot prompting)</li>
-      <li>Fact-checking and validation</li>
-      <li>A GitHub-based multilingual website documenting all results</li>
+      <li>Supports knowledge graphs and SPARQL queries</li>
+      <li>Promotes open knowledge for underrepresented cultures</li>
+      <li>Follows RDF and semantic web standards</li>
+      <li>Connects music with people, genres, instruments, and events</li>
     </ul>
 
-    <h2>🛠️ Tools Used</h2>
+    <h2>🌍 Why These Countries?</h2>
+    <p>
+      We chose Uzbekistan, Morocco, and Tunisia for both personal and academic reasons.
+    </p>
     <ul>
-      <li>SPARQL (Wikidata Query Service)</li>
-      <li>Language Models (ChatGPT, Gemini, DeepSeek)</li>
-      <li>GitHub Pages</li>
-      <li>HTML + CSS</li>
+      <li>Each team member represents one of these countries</li>
+      <li>All three have rich musical heritage (e.g. Shashmaqam, Andalusi music, Malouf)</li>
+      <li>These cultures are underrepresented in Wikidata</li>
+      <li>We explore both Central Asian and North African perspectives</li>
+    </ul>
+
+    <h2>📌 Project Goals</h2>
+    <ul>
+      <li>Use SPARQL to extract music-related data from Wikidata</li>
+      <li>Compare it with unstructured LLM-generated content</li>
+      <li>Identify gaps and validate knowledge manually</li>
+      <li>Publish a multilingual website with our findings</li>
+    </ul>
+
+    <h2>🛠️ Tools and Methods</h2>
+    <ul>
+      <li>Wikidata Query Service (SPARQL)</li>
+      <li>Language Models: ChatGPT, Gemini, DeepSeek</li>
+      <li>Manual verification of data</li>
+      <li>HTML, CSS, GitHub Pages for publishing</li>
     </ul>
   </div>
 
   <footer>
-    <p>© 2025 KE4H Team – Musical Knowledge Graphs</p>
+    © 2025 KE4H Project – Musical Knowledge Graphs
   </footer>
 
 </body>
